@@ -1,7 +1,7 @@
 import React from 'react'
 
 export default function App5() {
-    let names = ["Mango","Orange","Apple"]
+    let names = ["Mango","Orange","Apple","kiwi"]
 
   return (
     <b>

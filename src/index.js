@@ -1,15 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css'
-import Header from './Header';
-import Cakes from './Cakes';
+
+import App11 from './App11.js';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
  root.render(
   <React.StrictMode>
-   <Header />
-   <Cakes />
+   
+   <App11 />
    
 </React.StrictMode>
 );
