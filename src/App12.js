@@ -31,65 +31,65 @@ import { useState, useEffect } from "react";
 //   console.log(newArray);
 // }
 
-export default function App12() {
-  const [student, setStudent] = useState({ name: "", age: "" });
-  const [students, setStudents] = useState([]);
-  const addStudent = () => {
-    student.id = Date.now();
-    setStudents((prevStudents) => [...prevStudents, student]); //In React, it isn't allowed to change the original state array, so we can't use the push() method. We use the spread syntax (...) to unpack the elements of the existing array into a new array and add another value at the end.
-    setStudent({ name: "", age: "" });
-  };
-  const deleteStudent = (id) => {
-    setStudents(students.filter((e) => e.id !== id));
-  };
-  const editStudent = (value) => {
-    setStudent(value);
-    deleteStudent(value.id);
-  };
-  return (
-    <>
-      <p>
-        <input
-          type="text"
-          value={student.name}
-          onChange={(e) =>
-            setStudent((prevStudent) => ({
-              ...prevStudent,
-              ...{ name: e.target.value },
-            }))
-          }
-          placeholder="Enter Name"
-        ></input>
-      </p>
-      <p>
-        <input
-          type="text"
-          value={student.age}
-          onChange={(e) =>
-            setStudent((prevStudent) => ({
-              ...prevStudent,
-              ...{ age: e.target.value },
-            }))
-          }
-          placeholder="Enter Age"
-        ></input>
-      </p>
-      <p>
-        <button onClick={addStudent}>Add Student</button>
-      </p>
-      <div>
-        {students &&
-          students.map((value, index) => (
-            <div key={index}>
-              {value.id}-{value.name}-{value.age} -
-              <button onClick={() => deleteStudent(value.id)}>Delete</button>
-              <button onClick={() => editStudent(value)}>Edit</button>
-            </div>
-          ))}
-      </div>
-    </>
-  );
-}
+// export default function App12() {
+//   const [student, setStudent] = useState({ name: "", age: "" });
+//   const [students, setStudents] = useState([]);
+//   const addStudent = () => {
+//     student.id = Date.now();
+//     setStudents((prevStudents) => [...prevStudents, student]); //In React, it isn't allowed to change the original state array, so we can't use the push() method. We use the spread syntax (...) to unpack the elements of the existing array into a new array and add another value at the end.
+//     setStudent({ name: "", age: "" });
+//   };
+//   const deleteStudent = (id) => {
+//     setStudents(students.filter((e) => e.id !== id));
+//   };
+//   const editStudent = (value) => {
+//     setStudent(value);
+//     deleteStudent(value.id);
+//   };
+//   return (
+//     <>
+//       <p>
+//         <input
+//           type="text"
+//           value={student.name}
+//           onChange={(e) =>
+//             setStudent((prevStudent) => ({
+//               ...prevStudent,
+//               ...{ name: e.target.value },
+//             }))
+//           }
+//           placeholder="Enter Name"
+//         ></input>
+//       </p>
+//       <p>
+//         <input
+//           type="text"
+//           value={student.age}
+//           onChange={(e) =>
+//             setStudent((prevStudent) => ({
+//               ...prevStudent,
+//               ...{ age: e.target.value },
+//             }))
+//           }
+//           placeholder="Enter Age"
+//         ></input>
+//       </p>
+//       <p>
+//         <button onClick={addStudent}>Add Student</button>
+//       </p>
+//       <div>
+//         {students &&
+//           students.map((value, index) => (
+//             <div key={index}>
+//               {value.id}-{value.name}-{value.age} -
+//               <button onClick={() => deleteStudent(value.id)}>Delete</button>
+//               <button onClick={() => editStudent(value)}>Edit</button>
+//             </div>
+//           ))}
+//       </div>
+//     </>
+//   );
+// }
 
 ///////
 
@@ -255,41 +255,41 @@ export default function App12() {
 
 /////////
 
-// export default function App12() {
-//     const [student, setStudent] = useState({ name: "pavan", age: 21 });
-//     console.log(Date());
-//     return (
-//       <>
-//         <p>
-//           <input
-//             type="text"
-//             onChange={(e) =>
-//               setStudent((prevState) => ({
-//                 ...prevState,
-//                 ...{ name: e.target.value },
-//               }))
-//             }
-//             placeholder="Enter Name"
-//           ></input>
-//         </p>
-//         <p>
-//           <input
-//             type="text"
-//             onChange={(e) =>
-//               setStudent((prevState) => ({
-//                 ...prevState,
-//                 ...{ age: e.target.value },
-//               }))
-//             }
-//             placeholder="Enter Age"
-//           ></input>
-//         </p>
-//         <span>
-//           {student.name}-{student.age}
-//         </span>
-//       </>
-//     );
-//   }
+export default function App12() {
+    const [student, setStudent] = useState({ name: "pavan", age: 21 });
+    console.log(Date());
+    return (
+      <>
+        <p>
+          <input
+            type="text"
+            onChange={(e) =>
+              setStudent((prevState) => ({
+                ...prevState,
+                ...{ name: e.target.value },
+              }))
+            }
+            placeholder="Enter Name"
+          ></input>
+        </p>
+        <p>
+          <input
+            type="text"
+            onChange={(e) =>
+              setStudent((prevState) => ({
+                ...prevState,
+                ...{ age: e.target.value },
+              }))
+            }
+            placeholder="Enter Age"
+          ></input>
+        </p>
+        <span>
+          {student.name}-{student.age}
+        </span>
+      </>
+    );
+  }
 
 ///////////////
 
