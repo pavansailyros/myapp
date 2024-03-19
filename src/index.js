@@ -1,14 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css'
-import Dummy from './Dummy';
-import App14 from './App14';
+
+import App26 from './App26';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
  root.render(
   <React.StrictMode>
    
-   <App14 />
+   <App26 />
    
 </React.StrictMode>
 );
